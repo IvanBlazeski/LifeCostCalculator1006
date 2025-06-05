@@ -1,0 +1,55 @@
+body {
+    background: #f6f8fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.card {
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(100, 130, 200, 0.09);
+}
+
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-secondary {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], select, textarea {
+    border-radius: 8px !important;
+    border-color: #d5d8df !important;
+    font-size: 1rem;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+}
+
+h2, h5 {
+    color: #0e3267;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.list-group-item {
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem !important;
+    }
+    h2 {
+        font-size: 1.3rem !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: #e3e7ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8c1db;
+    border-radius: 5px;
+}
