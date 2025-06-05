@@ -4,10 +4,7 @@ require('dotenv').config();
 
 const app = express();
 
-// Static files
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Root
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
