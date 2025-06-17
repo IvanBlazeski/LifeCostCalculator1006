@@ -1,22 +1,16 @@
 version: '3'
 services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
   app:
     build: .
     ports:
       - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/lifecostdb
     depends_on:
       - mongo
-    environment:
-      - MONGODB_URI=mongodb://mongo:27017/costs_db
-      - NODE_ENV=development
-    volumes:
-      - .:/usr/src/app
-  mongo:
-    image: mongo
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-volumes:
-  mongo-data:

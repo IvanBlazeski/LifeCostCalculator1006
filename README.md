@@ -9,7 +9,7 @@
 3. Стартај:
 docker-compose up
 
-4. Отвори [http://localhost:3000](http://localhost:3000)
+4. Отвори [https://lifecostcalc.onrender.com/api/login](https://lifecostcalc.onrender.com/api/login)
 
 ## ⚙️ Структура (MVC)
 - **controllers/** – (ќе се полни во дел 3)
