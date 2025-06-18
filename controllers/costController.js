@@ -16,7 +16,7 @@ exports.create = async (req, res) => {
     const { amount, description, category, date } = req.body;
     const cost = await Cost.create({
       amount, description, category, date,
-      user: req.user.id    // сетирај од токенот, НЕ од body!
+      user: req.user.id    
     });
     res.status(201).json(cost);
   } catch (err) {

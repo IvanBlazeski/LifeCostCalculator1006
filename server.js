@@ -2,11 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const users = []; // Листа на корисници во меморија (НЕ во база)
+const users = []; 
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:4200', // дозволи само локално за Angular
+  origin: 'http://localhost:4200', 
   credentials: true
 }));
 app.use(bodyParser.json());

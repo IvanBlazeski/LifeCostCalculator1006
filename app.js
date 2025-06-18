@@ -14,9 +14,9 @@ dotenv.config();
 
 const app = express();
 
-// --- CORS middleware (стави го веднаш по express()) ---
+
 app.use(cors({
-  origin: ['http://localhost:4200', 'https://lifecostcalculator.onrender.com'], // Додај и други домени ако треба
+  origin: ['http://localhost:4200', 'https://lifecostcalculator.onrender.com'], 
   credentials: true
 }));
 

@@ -33,7 +33,6 @@ exports.login = async (req, res) => {
   }
 };
 
-// CRUD пример за добивање на сите users (за тест/admin)
 exports.getAll = async (req, res) => {
   const users = await User.find().select("-password");
   res.json(users);
