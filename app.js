@@ -13,6 +13,13 @@ const swaggerSpec = require('./swagger/swagger');
 dotenv.config();
 
 const app = express();
+
+// --- CORS middleware (стави го веднаш по express()) ---
+app.use(cors({
+  origin: ['http://localhost:4200', 'https://lifecostcalculator.onrender.com'], // Додај и други домени ако треба
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(helmet());
 app.use(express.static('public'));
@@ -41,10 +48,3 @@ app.use('/db', dbRoutes);
 app.listen(PORT, () => {
   console.log(`Серверот е стартуван на портата ${PORT}`);
 });
-const cors = require('cors');
-
-const cors = require('cors');
-app.use(cors({
-  origin: ['http://localhost:4200', 'https://lifecostcalculator.onrender.com'], // Додај и други домени ако треба
-  credentials: true
-}));

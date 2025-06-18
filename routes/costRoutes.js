@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const costController = require('../controllers/costController');
+const auth = require('../middleware/auth');
 
 /**
  * @swagger
@@ -18,7 +19,7 @@ const costController = require('../controllers/costController');
  *               items:
  *                 $ref: '#/components/schemas/Cost'
  */
-router.get('/', costController.getAll);
+router.get('/', auth, costController.getAll);
 
 /**
  * @swagger
@@ -42,7 +43,7 @@ router.get('/', costController.getAll);
  *       400:
  *         description: Грешка при креирање трошок
  */
-router.post('/', costController.create);
+router.post('/', auth, costController.create);
 
 /**
  * @swagger
@@ -72,7 +73,7 @@ router.post('/', costController.create);
  *       404:
  *         description: Трошок не е најден
  */
-router.put('/:id', costController.update);
+router.put('/:id', auth, costController.update);
 
 /**
  * @swagger
@@ -92,6 +93,6 @@ router.put('/:id', costController.update);
  *       404:
  *         description: Трошок не е најден
  */
-router.delete('/:id', costController.remove);
+router.delete('/:id', auth, costController.remove);
 
 module.exports = router;

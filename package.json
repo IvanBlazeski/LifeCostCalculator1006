@@ -4,11 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-<<<<<<< HEAD
-    "dev": "nodemon app.js"
-=======
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> 5595f3e6c39102a490d6608254c0f0b82c48112a
   },
   "dependencies": {
     "@angular/platform-browser-dynamic": "^20.0.3",
